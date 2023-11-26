@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# displays PID & name for lines containing bash
+pgrep -l bash
