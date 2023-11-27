@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# displays "To infinity and beyond" infinite number of times
+trap "echo 'I am invincible!!!'" SIGTERM
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
