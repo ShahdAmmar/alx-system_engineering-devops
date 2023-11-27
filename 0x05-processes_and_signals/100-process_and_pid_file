@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # file contains PID
-clean_up='rm /var/run/myscript.pid; exit $?'
+terminating='rm /var/run/myscript.pid; exit $?'
 echo $$ > /var/run/myscript.pid
 
 while true
@@ -8,6 +8,7 @@ do
         echo "To infinity and beyond"
         sleep 2
 	trap 'echo "Y U no love me?!"' SIGINT
-	trap 'echo "I hate the kill command"' SIGTERM
+	trap 'echo "I hate the kill command" && terminating' SIGTERM
+	trap 'terminating' SIGQUIT
 done
 
