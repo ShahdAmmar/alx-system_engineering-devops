@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# displays timr for 12 hr and 59 min
+hr=0
+while [ $hr -le 12 ]
+do
+	echo "Hour: $hr"
+	min=1
+	while [ $min -le 59 ]
+	do
+		echo "$min"
+		min=$(( min + 1 ))
+	done
+	hr=$(( hr + 1))
+done
