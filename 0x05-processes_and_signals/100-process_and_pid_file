@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# file contains PID
+clean_up='rm /var/run/myscript.pid; exit $?'
+echo $$ > /var/run/myscript.pid
