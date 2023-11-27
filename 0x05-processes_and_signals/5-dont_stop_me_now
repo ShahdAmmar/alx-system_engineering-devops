@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# end using kill
+inf_p=()
+readarray -t inf_p < <(pgrep -la -x "bash.*" | grep '4-to_infinity_and_beyond' | cut -d ' ' -f 1)
+for((i = 0; i < "${#inf_p[@]}"; i++)) do
+	kill -s SIGTERM "${inf_p[i]}"
+done
