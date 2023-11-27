@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# displays a text 10 times
+j=1
+while [ "$j" -le 10 ]
+do
+	echo "Best School"
+	j=$(( j + 1))
+done
