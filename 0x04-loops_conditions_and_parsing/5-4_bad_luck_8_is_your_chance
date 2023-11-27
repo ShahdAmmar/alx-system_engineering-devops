@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# displays a text 10 times with hi after 9
+j=1
+while [ "$j" -le 10 ]
+do
+	if [ "$j" -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ "$j" -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	j=$(( j + 1 ))
+done
