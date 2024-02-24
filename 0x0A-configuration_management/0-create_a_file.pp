@@ -1,3 +1,5 @@
+#!/usr/bin/pup
+
 # creating file in /tmp
 file { '/tmp/school':
         content => 'I love Puppet',
