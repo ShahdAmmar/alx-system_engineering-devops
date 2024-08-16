@@ -16,9 +16,9 @@ def get_employee_todo_list_progress(emp_id):
     user = requests.get(url + f'users/{emp_id}')
     user_json = user.json()
     emp_name = user_json.get('name')
-    if emp_name is None:
-        print('This employee doesn\'t exist. You entered invalid ID.')
-        sys.exit()
+    # if emp_name is None:
+    #    print('This employee doesn\'t exist. You entered invalid ID.')
+    #    sys.exit()
 
     parameters = {'userId': emp_id}
     todos = requests.get(url + f'users/{emp_id}/todos')
@@ -34,7 +34,7 @@ def get_employee_todo_list_progress(emp_id):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print('Usage: script_name <employee_id>')
-    else:
-        get_employee_todo_list_progress(sys.argv[1])
+    get_employee_todo_list_progress(sys.argv[1])
+    # if len(sys.argv) < 2:
+    #   print('Usage: script_name <employee_id>')
+    # else:
