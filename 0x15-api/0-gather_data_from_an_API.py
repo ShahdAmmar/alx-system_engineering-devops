@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This python script returns information about
     employee's TODO list progress for a given ID"""
+import json
 import requests
 import sys
 
@@ -33,10 +34,3 @@ if __name__ == "__main__":
           format(emp_name, comp_tasks, totl_tasks))
     for task in completed_tasks:
         print(f"\t {task.get('title')}")
-
-
-# if __name__ == "__main__":
-    # get_employee_todo_list_progress(sys.argv[1])
-    # if len(sys.argv) < 2:
-    #   print('Usage: script_name <employee_id>')
-    # else:
