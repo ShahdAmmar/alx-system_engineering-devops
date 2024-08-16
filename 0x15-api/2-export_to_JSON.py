@@ -34,7 +34,6 @@ def export_employee_todos_to_csv(emp_id):
 
     total_tasks_json = {str(emp_id): total_tasks}
 
-
     fl_name = str(emp_id) + '.json'
     with open(fl_name, 'w') as fl:
         json.dump(total_tasks_json, fl)
