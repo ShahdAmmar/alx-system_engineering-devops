@@ -5,13 +5,15 @@ import requests
 import sys
 
 
-def get_employee_todo_list_progress(emp_id):
-    """ This function gets information about the employee todo list progress
-    and prints the completed tasks
-    Args:
-        emp_id: the employee ID
-    """
+# def get_employee_todo_list_progress(emp_id):
+""" This function gets information about the employee todo list progress
+and prints the completed tasks
+Args:
+emp_id: the employee ID
+"""
+if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
+    emp_id = sys.argv[1]
 
     user = requests.get(url + f'users/{emp_id}')
     user_json = user.json()
@@ -33,8 +35,8 @@ def get_employee_todo_list_progress(emp_id):
         print(f"\t {task.get('title')}")
 
 
-if __name__ == "__main__":
-    get_employee_todo_list_progress(sys.argv[1])
+# if __name__ == "__main__":
+    # get_employee_todo_list_progress(sys.argv[1])
     # if len(sys.argv) < 2:
     #   print('Usage: script_name <employee_id>')
     # else:
