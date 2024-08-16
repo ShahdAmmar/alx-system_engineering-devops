@@ -21,7 +21,7 @@ def get_employee_todo_list_progress(emp_id):
         sys.exit()
 
     parameters = {'userId': emp_id}
-    todos = requests.get(url + f'todos', params=parameters)
+    todos = requests.get(url + f'users/{emp_id}/todos')
     todos_json = todos.json()
 
     completed_tasks = [task for task in todos_json if task.get('completed')]
