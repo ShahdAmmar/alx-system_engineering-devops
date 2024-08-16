@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-""" This python script returns information about
-    employee's TODO list to a csv file"""
+""" This python script exports data about
+    employee's tasks in a json format for a given ID"""
 import json
 import requests
 import sys
 
 
-def export_employee_todos_to_csv(emp_id):
-    """ This function gets information about the employee todos
-    and exports it to csv file
+def export_employee_tasks_to_json(emp_id):
+    """ This function exports data about
+        employee's tasks in a json format
     Args:
         emp_id: the employee ID
     """
@@ -43,4 +43,4 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print('Usage: script_name <employee_id>')
     else:
-        export_employee_todos_to_csv(sys.argv[1])
+        export_employee_tasks_to_json(sys.argv[1])
